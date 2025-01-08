@@ -1,0 +1,29 @@
+{
+    "nombre": "Gonzalo Mansera Ruiz",
+    "profesion": "Estudiante de CGFS DAW ",
+    "bio":"Soy una persona Proactiva, organizada y responsable, con habilidades interpersonales, trabajo en equipo, toma de decisiones rápida y manejo de presión. Busco un puesto dinámico y desafiante para crecer profesionalmente.",
+    "experiencia": [
+        {
+        "empresa": "XS Acessories",
+        "descripcion": "Dependiente de tienda",
+        "fecha":" Oct 2023 - Mar 2024"
+        },{
+        "empresa": " MICROTEX INFORMÁTICA (PRÁCTICAS GRADO MEDIO)",
+        "descripcion": " Reparador de Equipos ",
+        "fecha":" Mar 2024 - Jun 2024"
+        },{
+            "empresa": "BURGER KING CARLOS V (CUBRIENDO VACACIONES)",
+            "descripcion": "Cocinero ",
+            "fecha":" Jun 2024 - Sept 2024"
+            }
+    ],
+    "habilidades": [
+        {
+        "habilidad1": "Trabajo en equipo",
+        "habilidad2": "Proactividad",
+        "habilidad3": "Adaptación a los cambios y aprendizaje continuo"
+        }
+    ]
+
+  }
+  
