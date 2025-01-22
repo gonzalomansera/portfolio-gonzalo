@@ -1,29 +1,66 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Project {
+	title: String
+	description: String
+}
 
-const {default : meData} = await import('../assets/me.json');
+const { default: meData } = await import('../assets/me.json');
 
+const projects =await Astro.glob<Project>("../pages/projects/*.md")
+console.log(projects)
 ---
-<Layout>
-	</section><h1>{meData.nombre}</h1>
-		<p>{meData.profesion}</p>
-		<p>{meData.bio}</p>
-	</section>
 
-	<section><h2>Experiencia</h2>
-		{meData.experiencia.map((exp) => (
-		<p><b>{exp.fecha}</b></p>
-		<p>{exp.empresa}</p>
-		<p>{exp.descripcion}</p>
+
+<Layout>
+	<Header />
+    <section class="cabecera" id="Cabecera">
+        <h1>{meData.nombre}</h1>
+        <p class="profesion">{meData.profesion}</p>
+        <p class="bio">{meData.bio}</p>
+    </section>
+	<section class="proyectos" id="Proyectos">
+		<h2>Proyectos</h2>
+		{projects.map((project)=>(
+			<a href={project.url}class="enlace-proyecto">
+				<article class="proyecto" >
+				<h3>{project.frontmatter.title}</h3>
+				<p>{project.frontmatter.description}</p>
+				</article>
+			</a>
 		))}
 	</section>
+    <section class="experiencia" id="Experiencia">
+        <h2>Experiencia Profesional</h2>
+        <div class="experiencia-contenido">
+            {meData.experiencia.map((exp) => (
+                <div class="experiencia-item">
+                    <p class="experiencia-fecha"><b>{exp.fecha}</b></p>
+                    <p class="experiencia-empresa">{exp.empresa}</p>
+                    <p class="experiencia-descripcion">{exp.descripcion}</p>
+                </div>
+            ))}
+        </div>
+    </section>
 
-	<section><h2>Habilidades</h2>
-		{meData.habilidades.map((hab)=>
-		<p>{hab.habilidad1}</p>
-		<p>{hab.habilidad2}</p>
-		<p>{hab.habilidad3}</p>
-		)}
-	</section>
+    <section class="habilidades" id="Habilidades">
+        <h2>Habilidades Destacadas</h2>
+        <div class="habilidades-contenido">
+            {meData.habilidades.map((hab) => (
+                <div class="habilidad-item">
+                    <p>{hab.habilidad1}</p>
+                    <p>{hab.habilidad2}</p>
+                    <p>{hab.habilidad3}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+	<Footer>
+
+	</Footer>
+
+	
 </Layout>
