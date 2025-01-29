@@ -1,7 +1,10 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f9fc;
-    color: #5c5e60;
+/* Estilo inspirado en ChatGPT */
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
     margin: 0;
     padding: 0;
 }
@@ -11,136 +14,97 @@ body {
     text-align: center;
     padding: 40px 20px;
     margin: 20px auto;
-    border: 4px solid #34495e;
-    margin-top: 84px;
     border-radius: 12px;
-    background-color: #ecf0f1;
+    background-color: #161b22;
     max-width: 900px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-section {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 84px;
-    font-style: normal; 
-    color: #444;
-    max-width: 900px;
-}
-
 
 .cabecera h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin: 10px 0;
-    color: #2c3e50;
+    color: #58a6ff;
 }
 
 .cabecera .profesion {
-    font-size: 30px;
+    font-size: 24px;
     margin: 10px 0;
-    color: #2980b9;
+    color: #8b949e;
 }
 
 .cabecera .bio {
     font-size: 18px;
     margin: 10px 0;
-    color: #34495e;
+    color: #c9d1d9;
 }
 
-/* Experiencia */
-.experiencia {
+/* Secciones */
+section {
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.experiencia, .habilidades {
     max-width: 1000px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #ecf0f1;
+    background-color: #161b22;
     border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.experiencia h2 {
+.experiencia h2, .habilidades h2 {
     text-align: center;
-    font-size: 35px;
-    color: #2c3e50;
+    font-size: 30px;
+    color: #58a6ff;
+    margin-bottom: 20px;
 }
 
-.experiencia-contenido {
+.experiencia-contenido, .habilidades-contenido {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.experiencia-item {
+.experiencia-item, .habilidad-item {
     padding: 15px;
-    border: 2px solid #bdc3c7;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: #21262d;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    transition: transform 0.2s ease-in-out;
 }
 
-
+.experiencia-item:hover, .habilidad-item:hover {
+    transform: translateY(-3px);
+}
 
 .experiencia-fecha {
-    font-size: 16px;
-    color: #7f8c8d;
+    font-size: 14px;
+    color: #8b949e;
 }
 
 .experiencia-empresa {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #e6edf3;
 }
 
-.experiencia-descripcion {
-    font-size: 16px;
-    color: #34495e;
+.enlace-proyecto {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-/* Habilidades */
-.habilidades {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ecf0f1;
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.habilidades h2 {
-    text-align: center;
-    font-size: 35px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.habilidades-contenido {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.habilidad-item {
-    padding: 15px;
-    border: 2px solid #bdc3c7;
-    border-radius: 8px;
-    background-color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    width: 250px;
-    
-}
-
-.enlace-proyecto :hover{
-    color: rgb(14, 8, 39);
+.enlace-proyecto:hover {
+    color: #1f6feb;
     text-decoration: underline;
 }
-.enlace-proyecto{
-    text-decoration: none;
-}
-.proyecto{
-    border: 2px solid #ccc;
+
+.proyecto {
     border-radius: 10px; 
-    color: #051dbc; 
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #efe7e7; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #21262d;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
